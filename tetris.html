@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="tetris.css">
+</head>
+<body>
+    <div id="contenedor">
+        <header id="cabecera">
+            <b>
+                <font color="cyan" size="15px">T</font>
+                <font color="cyan" size="15px">E</font>
+                <font color="yellow" size="15px">T</font>
+                <font color="cyan" size="15px">R</font>
+                <font color="yellow" size="15px">I</font>
+                <font color="orange" size="15px">S</font>
+            </b>
+        </header>
+        <div id="contenido">
+            <div id="izquierda">
+                <div id="siguientePieza">
+                    <h2 style="color:white">SIGUIENTE PIEZA</h2>
+                    <canvas id="nextShape" width="175" height="90"></canvas>
+                </div>
+                <div id="comoJugar">
+                    <h3><u>COMO JUGAR</u></h3>
+                    <b>- Para mover la pieza:</b> Izquierda | Abajo | Derecha
+                    <img src="imagenes/teclas_direcciones.jpeg" alt="teclas direccionales">
+                    <br><b>- Para rotar la pieza:</b> Arriba</br> 
+                    <img src="imagenes/tecla_arriba.jpg" alt="tecla arriba">
+                    <br><b>- Para soltar la pieza:</b> Barra espaciadora</br> 
+                    <img src="imagenes/barra_espaciadora.jpeg" alt="barra espaciadora" width="200" height="50">
+                    <br><b>- Pausar/Reanudar el juego:</b> Letra P</br>
+                    <img src="imagenes/tecla-p.jpeg" alt="tecla p">
+                </div>
+            </div>
+            <div id="tablero">
+                <canvas id="canvas" width="300" height="600"></canvas>
+            </div>
+            <div id="derecha">
+                <button id="btnPlay">Play</button>
+                <button id="btnMusica" onclick="onOffMusica()"><img id="imgMusica" src="imagenes/bafleON.png" width="30px" height="30px"></button> 
+                <span>Si pulsa este botón, pulse dentro del tablero </br>para seguir jugando sin reactivarlo.</span>
+                <p id="pausa" align="left"></p>
+                <div id="puntuacion">
+                    PUNTUACIÓN
+                    <br><canvas id="puntos" width="110" height="50" style="color:white">0</canvas>
+                    <div id="score">Score: 0</div>
+                </div>
+                <div id="clasificacion">
+                    RANKING
+                    <br><canvas id="ranking" width="320" height="210" style="color:white"></canvas>
+                    <div id="mediaYPartidas">
+                        Puntuación media:<div id="media"></div>
+                        Número de partidas:<div id="partidas"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="pie">Juego del TETRIS copia por mi </footer>
+    </div>
+    <script src="tetris.js" defer></script>
+</body>
+</html>
